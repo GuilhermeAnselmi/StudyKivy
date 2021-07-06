@@ -1,0 +1,21 @@
+<Adm>:
+    Inicio:
+        id: inicio
+        name: 'inicio'
+
+<Inicio>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            id: lblTeste
+            text: ''
+        TextInput:
+            id: txtPass
+            text: ''
+            password: True
+        Button:
+            text: 'Press-me'
+            on_press: root.click()
+        Button:
+            text: 'Apagar'
+            on_press: root.clear()

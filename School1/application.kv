@@ -1,0 +1,36 @@
+<Manager>:
+    Menu:
+        name: 'menu'
+    Game:
+        name: 'game'
+    GameOver:
+        name: 'gameover'
+<Menu>:
+    BoxLayout:
+        Label:
+            text: 'Primary Screen'
+        Button:
+            text: 'Start'
+            on_release: app.root.current = 'game'
+        Button:
+            text: 'End'
+            on_release: app.stop()
+<Game>:
+    BoxLayout:
+        Label:
+            text: 'Game Screen'
+        Button:
+            text: 'Game Over'
+            on_release: app.root.current = 'gameover'
+<GameOver>:
+    BoxLayout:
+        padding: '50dp'
+        spacing: '20dp'
+        Label:
+            text: 'Game Over'
+        Button:
+            text: 'Start Game'
+            on_release: root.current = 'game'
+        Button:
+            text: 'Menu'
+            on_release: root.current = 'menu'
